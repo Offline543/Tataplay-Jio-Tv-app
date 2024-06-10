@@ -11,43 +11,6 @@
             }
         });
 
-        // Function to filter channels by category
-        document.getElementById('category').addEventListener('change', function() {
-            var category = this.value;
-            var channels = document.querySelectorAll('.channel');
-            channels.forEach(function(channel) {
-                if (category === '' || channel.getAttribute('data-category') === category) {
-                    channel.style.display = 'block';
-                } else {
-                    channel.style.display = 'none';
-                }
-            }); 
-        });
-
-        // Function to search channels by name
-        document.getElementById('search').addEventListener('input', function() {
-            var searchQuery = this.value.toLowerCase();
-            var channels = document.querySelectorAll('.channel');
-            channels.forEach(function(channel) {
-                var channelName = channel.querySelector('.channel-name').textContent.toLowerCase();
-                if (channelName.includes(searchQuery)) {
-                    channel.style.display = 'block';
-                } else {
-                    channel.style.display = 'none';
-                }
-            });
-        });
-
-        // Function to open channel in iframe
-        function openChannel(url) {
-            var finalUrl = '' + url;
-            var iframe = document.getElementById('channelFrame');
-            var pageTitle = document.getElementById('pageTitle');
-            iframe.src = finalUrl;
-            iframe.style.display = 'block';
-            pageTitle.style.display = 'none'; // Hide the h1 element
-            iframe.scrollIntoView({ behavior: 'smooth' }); // Scroll to the iframe
-        }
-    </script>
+         </script>
 </body>
 </html>    
